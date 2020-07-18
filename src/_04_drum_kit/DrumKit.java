@@ -61,11 +61,15 @@ public class DrumKit implements MouseListener {
 		ap.add(lol);
 
 		// 11. Set the layout of the panel to "new GridLayout()"
+		 GridLayout aps1 = new GridLayout();
+		 aps.setLayout(aps1);
 
 		// 12. call the pack() method on the frame. Run your program. Do you see
 		// your drum image?
+		ap.pack();
 
 		// 13. add this mouse listener to drumLabelWithImage
+		//lol.addComponentListener(MouseListener);
 
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
@@ -75,6 +79,7 @@ public class DrumKit implements MouseListener {
 	public void mouseClicked(MouseEvent e) {
 		// 14. Print "mouse clicked" to the console. Run your program and watch
 		// the console to see when this is printed.
+		System.out.println("Mouse clicked");
 
 		JLabel drumClicked = (JLabel) e.getSource(); // This line gets the label
 														// that the mouse
