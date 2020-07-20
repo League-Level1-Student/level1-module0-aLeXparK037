@@ -5,7 +5,7 @@ package _05_body_part_quiz;
  *    Level 1
  */
 
-public class BodyPartQuizRunner {
+public class BodyPartQuizRunner { 
 	public static void main(String[] args) {
 		new BodyPartQuiz().run();
 	}
