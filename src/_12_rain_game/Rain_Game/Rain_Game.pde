@@ -19,9 +19,14 @@ void spawn() {
   }
   if (randomNumber > mouseX &&randomNumber < mouseX+100 &&fall == 495) {
     score +=1;
-  } else if (randomNumber < mouseX &&randomNumber > mouseX+100 &&fall == 495) {
+  } else if (randomNumber < mouseX &&fall == 495) {
     score  -=1;
-    if (score == 0) {
+    if (score <= 0) {
+      score = 0;
+    }
+  } else if (randomNumber > mouseX+100 &&fall == 495) {
+    score -=1;
+    if (score <= 0) {
       score = 0;
     }
   }
@@ -41,12 +46,12 @@ void draw() {
   scores();
   if (score > 10) {
     fall();
-    fall +=10;
+    fall = fall + 5;
     spawn();
     scores();
   } else if (score > 20) {
     fall();
-    fall +=20;
+    fall = fall + 10;
     spawn();
     scores();
   }
