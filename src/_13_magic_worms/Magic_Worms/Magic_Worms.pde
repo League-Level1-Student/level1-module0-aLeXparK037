@@ -3,19 +3,22 @@ int y = 0;
 
 void setup() {
 size(300,300);
-background(#000000);
-for (int i = 0; i < 300; i++) {
-   int randomNumber = (int) random(300);
-   int randomNumbers = (int) random(300);
-   ellipse(randomNumber,randomNumbers, 50,50);
- }
+  background(#000000);
+
+
 }
 
 void draw() {
- 
+  makeMagical();
+ for (int i = 0; i < 300; i++) {
+  fill(255,0,0);
+   //int randomNumber = (int) random(300);
+   //int randomNumbers = (int) random(300);
+   ellipse(getWormX(i),getWormY(i), 5,5);
+ }
 }
 
-float frequency = .001;
+float frequency = .009;
     float noiseInterval = PI;
 
     void makeMagical() {
