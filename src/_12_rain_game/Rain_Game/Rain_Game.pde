@@ -1,5 +1,7 @@
 int fall = 0;
 int randomNumber = (int) random(500);
+int score = 0;
+
 void setup() {
   size(500,500);
   
@@ -15,4 +17,6 @@ void draw() {
     fall = fall - 500;
     randomNumber = (int) random(500);
   }
+  
+  
 }
